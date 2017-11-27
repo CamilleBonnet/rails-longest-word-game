@@ -1,0 +1,36 @@
+<h3>Let's start to play...</h3>
+
+<form action="/game">
+  <label for="grid_display">How many letters do you want in the grid ?</label>
+  <input type="text" id="grid_display" name="grid_size" placeholder="8">
+  <input type="submit" value="Go on!">
+</form>
+
+<h3>here is you grid...</h3>
+
+<p>
+  <% session[:grid].each do |letter| %>
+  <%= letter + ", " %>
+  <% end %>
+</p>
+
+
+<!-- <form action="/score">
+  <label for="question">What word have you found?</label>
+  <input type="text" id="word_found" name="word_found" placeholder="xxxxxxxxx">
+  <input type="submit" value="Go on!">
+</form> -->
+
+<form action="/score">
+  <label for="question">What word have you found?</label>
+  <input type="text" id="word_found" name="word_found" placeholder="xxxxxxxxx">
+  <!-- <input type="hidden" value="<%# @grid.join(",") %>" name="grid"> -->
+  <!-- <input type="hidden" value="<%# Time.now %>" name="user_start"> -->
+  <input type="submit" value="Go on!">
+</form>
+
+
+
+
+
+
